@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/style/signin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- LogIn / SignIn -->
+    <div class="mid" style="height: 100vh">
+      <div class="log">
+        <div id="log-in" class="log-ac msgGone">
+          <h3>sign in</h3>
+          <div class="log-icon">
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <p class="log-err">or use your email & password</p>
+          <form action="" method="post" class="log-form">
+            <div class="log-one">
+              <input type="text" name="name" placeholder="name" />
+              <p>OR</p>
+              <input type="text" name="email" placeholder="email" />
+            </div>
+            <input type="text" name="password" placeholder="password" />
+            <a href="" class="log-err">forget your password ?</a>
+            <input type="submit" value="sign in" />
+          </form>
+        </div>
+
+        <div id="log-up" class="log-ac">
+          <h3>sign up</h3>
+          <div class="log-icon">
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <p class="log-err">or use your email & password</p>
+          <form action="" method="post" class="log-form">
+            <input type="text" name="name" placeholder="name" />
+            <input type="text" name="email" placeholder="email" />
+            <input type="text" name="password" placeholder="password" />
+            <input type="submit" value="sign up" />
+          </form>
+        </div>
+
+        <div id="log-block" class="tochangeStart">
+          <div id="log-in-msg" class="log-ac log-type msgGone">
+            <a href ="home.html"><img src="./imgs/g8rees.png" /></a>
+            <h3>Welcome Back</h3>
+            <p>where have you been ?</p>
+            <button onclick="if(disable) active()">sign in</button>
+          </div>
+          <div id="log-up-msg" class="log-ac log-type">
+            <a href ="home.html"><img src="./imgs/g8rees.png" /></a>
+            <h3>Hello!</h3>
+            <p>do u wanna play a game ?</p>
+            <button onclick="if(disable) active()">sign in</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      const login = document.getElementById("log-in");
+      const logup = document.getElementById("log-up");
+      const loginmsg = document.getElementById("log-in-msg");
+      const logupmsg = document.getElementById("log-up-msg");
+      const logblock = document.getElementById("log-block");
+      const time = 1000;
+
+      let disable = true;
+      let page = 1;
+      let lc = () => {
+        login.classList.toggle("msgGone");
+        loginmsg.classList.toggle("msgGone");
+        logup.classList.toggle("msgGone");
+        logupmsg.classList.toggle("msgGone");
+      };
+
+      let active = (e) => {
+        disable = false;
+        page = page == 1 ? 0 : 1;
+
+        // buton toggle edildiğinde
+        if (page == 0) {
+          logblock.classList.add("tochange");
+          logblock.classList.add("tochangeEnd");
+          logblock.classList.remove("tochangeStart");
+
+          // Log sola
+          logupmsg.classList.add("log-toleftmsg");
+          logup.classList.add("log-toright");
+
+          // Loglar değişir
+          setTimeout(() => {
+            lc();
+
+            login.classList.add("log-fromleft");
+            loginmsg.classList.add("log-fromrightmsg");
+          }, time / 2);
+        } else {
+          // Log sağa
+          loginmsg.classList.add("log-torightmsg");
+          login.classList.add("log-toleft");
+
+          logblock.classList.add("tochangeR");
+          logblock.classList.remove("tochangeEnd");
+          logblock.classList.add("tochangeStart");
+
+          setTimeout(() => {
+            lc();
+
+            logup.classList.add("log-fromright");
+            logupmsg.classList.add("log-fromleftmsg");
+          }, time / 2);
+        }
+
+        // Reset animation
+        setTimeout(() => {
+          logblock.classList.remove("tochange");
+          logblock.classList.remove("tochangeR");
+
+          login.classList.remove("log-fromleft");
+          loginmsg.classList.remove("log-fromrightmsg");
+          login.classList.remove("log-toleft");
+          loginmsg.classList.remove("log-torightmsg");
+
+          logup.classList.remove("log-fromright");
+          logupmsg.classList.remove("log-fromleftmsg");
+          logup.classList.remove("log-toright");
+          logupmsg.classList.remove("log-toleftmsg");
+          loginmsg.classList.add()
+          disable = true;
+        }, time);
+      };
+    </script>
+  </body>
+</html>

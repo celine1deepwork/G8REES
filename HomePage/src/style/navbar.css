@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@300&display=swap');
+
+body{margin: 0;
+    font-family: sans-serif;
+    background-color: #e5e5e5;
+}
+
+
+nav{
+    background: rgb(179,86,110);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo-link img{
+    width: 80px; 
+    font-weight: 350;
+}   
+
+.sidenav{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'PT Serif', serif;
+}
+
+.log{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.log a {
+    float: right;
+    text-transform: capitalize;
+}
+
+.topnav a{
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color:  #fff;
+    font-weight: 200;
+    text-decoration: none;
+}
+.topnav a:hover{
+    background-color: darkgray;
+    color: black;
+}
+
+.topnav-left{
+    float: right;
+}
