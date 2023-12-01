@@ -1,225 +1,286 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <!--<title>G8REES</title>-->
-        <link rel="stylesheet" type="text/css" href="style/agent.css">
-        <link rel="stylesheet" type="text/css" href="style/navbar.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
 
-        <style>
-          div.solid {
-            border-style: solid;
-            border-color: rgba(0, 0, 0, 0.334);
-            padding-left: 20px;
-            padding-right: 20px;
-          }
+<head>
+  <meta charset="UTF-8">
+  <!--<title>G8REES</title>-->
+  <link rel="stylesheet" type="text/css" href="style/agent.css">
+  <link rel="stylesheet" type="text/css" href="style/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-          .icon-container {
-            display: flex;
-            align-items: center;
-            margin-top: 20px; /* Added margin for better separation */
-        }
+  <script src="./filter.js"></script>
+</head>
 
-        .icon-container svg {
-            margin-right: 15px; /* Added margin for better separation */
-        }
-          
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-            border: 2px solid black;
-            }
+<body>
+  <nav class="topnav">
+    <div class="sidenav">
+      <a href="buy.html">Buy</a>
+      <a href="rent.html">Rent</a>
+      <a href="agent.html">Agent finder</a>
+    </div>
+    <div class="sidenav logo">
+      <a class="logo-link" href="home.html">
+        <img src="imgs/g8rees.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="sidenav log">
+      <a href="signin.html">Sign in</a>
+      <a href="signup.html">Sign up</a>
+    </div>
+  </nav>
 
-        th {
-            background-color: #a1a0a0;
-            position: relative;
-        }
+  <div class="content">
+    <h1 style="color: #DE6767; font-size: 40px;">Find an Agent</h1>
 
-        th::after {
-        content: " ▼"; /* Ok işareti */
-        font-size: 12px;
-        position: absolute;
-        top: 50%;
-        right: 8px;
-        transform: translateY(-50%);
-       }
+    <div class="filters">
+      <div class="filter">
+        <label for="location">Location:</label>
+        <div class="search-container">
+          <input type="text" id="location" name="location" placeholder="Neighborhood/City" class="search-input">
+          <button type="submit" class="fa fa-search"></i></button>
+        </div>
+      </div>
+      <div class="filter">
+        <label for="agentName">Agent Name:</label>
+        <div class="search-container">
+          <input type="text" id="agentName" name="agentName" placeholder="Agent Name" class="search-input">
+          <button type="submit" class="fa fa-search"></i></button>
+        </div>
+      </div>
+      <div class="filter">
+        <label for="specialties">Specialties:</label>
+        <div class="search-container">
+          <select id="specialties" name="specialties" placeholder="Any" class="search-input">
+            <option value="any">Any</option>
+            <option value="buyeragent">Buyer's Agent</option>
+            <option value="listingagent">Listing Agent</option>
+            <option value="relocation">Relocation</option>
+            <option value="shortsale">Short-Sale</option>
+            <option value="other">Other</option>
+          </select>
+          <a href="searchagent.html">
+            <button class="search-button">Search</button>
+          </a>
+        </div>
+      </div>
+    </div>
 
-        th.active::after {
-            content: " ▲"; /* Ters ok işareti */
-        }
+    <h1 style="color: #DE6767; font-size: 40px;">Featured Agents</h1>
+    <div class="tablo-out">
+      <table id="emp-table">
+        <thead>
+          <tr>
+            <th col-index=1>Agent Name</th>
+            <th col-index=2>Location</th>
+            <th col-index=3>Client Review</th>
+            <th col-index=4>Field
+              <select class="table-filter" onchange="filter_rows()">
+                <option value="all">Select</option>
+              </select>
+            </th>
+            <th col-index=5>Experience
+              <select class="table-filter" onchange="filter_rows()">
+                <option value="all">Select</option>
+              </select>
+            </th>
+            <th col-index=6>Look at the agent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sonny Vataj</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Rent</td>
+            <td>1</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Alexander Hoffman</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>5</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Isabella Martinez</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Sell</td>
+            <td>7</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Liam O'Connor</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>3</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Sophia Chang</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>8</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Daniel Kowalski</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Rent</td>
+            <td>4</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Olivia Rodriguez</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Sell</td>
+            <td>1</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Sebastian Müller</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>5</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Emily Nakamura</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Rent</td>
+            <td>9</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Lucas Costa</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Sell</td>
+            <td>2</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Aria Patel</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>6</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Sonny Vataj</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Rent</td>
+            <td>1</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Alexander Hoffman</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>5</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Isabella Martinez</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Sell</td>
+            <td>7</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Liam O'Connor</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>3</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Sophia Chang</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>8</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Daniel Kowalski</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Rent</td>
+            <td>4</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Olivia Rodriguez</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Sell</td>
+            <td>1</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Sebastian Müller</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>5</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Emily Nakamura</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Rent</td>
+            <td>9</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Lucas Costa</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Sell</td>
+            <td>2</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+          <tr>
+            <td>Aria Patel</td>
+            <td>New York</td>
+            <td>I have already recommended him to a few..</td>
+            <td>Buy</td>
+            <td>6</td>
+            <td><a href="agentpage.html">Look Agent</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        td, th {
-            border: 0px solid;
-            text-align: left;
-            padding: 8px;
-            }
+    <script>
+      window.onload = () => {
+        console.log(document.querySelector("#emp-table > tr:nth-child(1) > td:nth-child(4) ").innerHTML);
+      };
 
-        tr:nth-child(even) {
-            background-color: #dddddd;
-            }
-        tr:nth-child(odd) {
-            background-color: white;
-            }
+      getUniqueValuesFromColumn()
 
-        </style>
-      
-      </head>
-      <body>
-        <nav class="topnav">
-            <div class="sidenav">
-              <a href="buy.html">Buy</a>
-              <a href="rent.html">Rent</a>
-              <a href="agent.html">Agent finder</a>
-            </div>
-            <div class="sidenav logo">
-              <a class="logo-link" href="home.html">
-                <img src="imgs/g8rees.png" alt="Logo" class="logo-img">
-            </a>    </div>
-            <div class="sidenav log">
-              <a href="signin.html">Sign in</a>
-              <a href="signup.html">Sign up</a>
-            </div>
-          </nav>
+    </script>
 
-          <div class="content">
-              <h1 style="color: #DE6767; font-size: 40px;">Find an Agent</h1>
-              
-              <div class="filters">
-                  <div class="filter">
-                      <label for="location">Location:</label>
-                        <div class="search-container">
-                          <input type="text" id="location" name="location" placeholder="Neighborhood/City" class="search-input">
-                          <button type="submit" class="fa fa-search"></i></button>
-                        </div>
-                  </div>
-                  <div class="filter">
-                      <label for="agentName">Agent Name:</label>
-                        <div class="search-container">
-                          <input type="text" id="agentName" name="agentName" placeholder="Agent Name" class="search-input">
-                          <button type="submit" class="fa fa-search"></i></button>   
-                        </div>
-                  </div>
-                <div class="filter">
-                    <label for="specialties">Specialties:</label>
-                    <div class="search-container">
-                        <select id="specialties" name="specialties" placeholder="Any" class="search-input">
-                          <option value="any">Any</option>
-                          <option value="buyeragent">Buyer's Agent</option>
-                          <option value="listingagent">Listing Agent</option>
-                          <option value="relocation">Relocation</option>
-                          <option value="shortsale">Short-Sale</option>
-                          <option value="other">Other</option>
-                        </select>
-                  </div>  
-                </div>
-                <div class="filter">
-                    <label for="languages">Languages:</label>
-                    <div class="search-container">
-                    <select id="languages" name="languages" class="search-input">
-                      <option value="english">English</option>
-                      <option value="german">German</option>
-                      <option value="turkish">Turkish</option>
-                      <option value="spanish">Spanish</option>
-                      <option value="russian">Russian</option>
-                      <option value="italian">Italian</option>
-                      <option value="greek">Greek</option>
-                      <option value="french">French</option>
-                      <option value="arabic">Arabic</option>
-                      <option value="polish">Polish</option>
-                    </select>
-                    <a href="searchagent.html">
-                        <button class="search-button">Search</button>
-                  </a>
-                </div>
-              </div>
-            </div>
+    
 
-            <h1 style="color: #DE6767; font-size: 40px;">Featured Agents</h1>
+  </div>
+  </div>
+  </div>
+</body>
 
-            <table border="1">
-                <tr>
-                    <th>Agent Name</th>
-                    <th>Location</th>
-                    <th>Client Review</th>
-                    <th>Look at the agent</th>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html"> Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf= "agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-                <tr>
-                    <td>Sonny Vataj</td>
-                    <td>New York</td>
-                    <td>I have already recommended him to a few..</td>
-                    <td><a herf="agentpage.html">Look Agent</a></td>
-                </tr>
-
-            </table>
-
-            </div>
-      </body>
 </html>
