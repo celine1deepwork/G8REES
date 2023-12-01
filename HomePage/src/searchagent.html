@@ -25,6 +25,44 @@
             margin-right: 15px; /* Added margin for better separation */
         }
           
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid black;
+            }
+
+        th {
+            background-color: #a1a0a0;
+            position: relative;
+        }
+
+        th::after {
+        content: " ▼"; /* Ok işareti */
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+       }
+
+        th.active::after {
+            content: " ▲"; /* Ters ok işareti */
+        }
+
+        td, th {
+            border: 0px solid;
+            text-align: left;
+            padding: 8px;
+            }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+        tr:nth-child(odd) {
+            background-color: white;
+            }
+
         </style>
       
       </head>
@@ -97,17 +135,91 @@
                 </div>
               </div>
             </div>
-            <div class="icon-container">
-                <svg style="width:143px; height:137px; Padding-right: 15px;" viewBox="0 0 143 137" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="56.5" cy="56.5" r="51.5" stroke="#DE6767" stroke-width="10"/>
-                  <circle cx="57" cy="52" r="17" fill="#DE6767"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M87.6937 90.9853C79.4442 98.452 68.5032 103 56.5 103C45.1042 103 34.6659 98.9007 26.5792 92.0963C33.0378 81.8258 44.4718 75 57.5 75C70.0526 75 81.1252 81.3365 87.6937 90.9853Z" fill="#DE6767"/>
-                  <path d="M98 91.6465L137 130.646" stroke="#DE6767" stroke-width="12" stroke-linecap="round"/>
-                  </svg>
-                <div class = "solid">
-                  <p style="font-size:20px; color: rgb(111, 111, 111);"> <b>Find agents in your area. <br>   <br> To get started, enter your location or <br> search for a specific agent by name.</b></p>
-                </div>
-              </div>
+
+            <h1 style="color: #DE6767; font-size: 40px;">Featured Agents</h1>
+
+            <table border="1">
+                <tr>
+                    <th>Agent Name</th>
+                    <th>Location</th>
+                    <th>Client Review</th>
+                    <th>Look at the agent</th>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html"> Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf= "agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+                <tr>
+                    <td>Sonny Vataj</td>
+                    <td>New York</td>
+                    <td>I have already recommended him to a few..</td>
+                    <td><a herf="agentpage.html">Look Agent</a></td>
+                </tr>
+
+            </table>
+
             </div>
       </body>
 </html>
