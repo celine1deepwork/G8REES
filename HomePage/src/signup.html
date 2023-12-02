@@ -15,14 +15,14 @@
     <div class="mid" style="height: 100vh">
       <div class="log">
         <div id="log-in" class="log-ac msgGone">
-          <h3>sign in</h3>
+          <h3>Sign In</h3>
           <div class="log-icon">
             <a href="#"><i class="fab fa-google"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
-          <p class="log-err">or use your email & password</p>
+          <p class="log-err">Sign In as Admin</p>
           <form action="" method="post" class="log-form">
             <div class="log-one">
               <input type="text" name="name" placeholder="name" />
@@ -30,25 +30,25 @@
               <input type="text" name="email" placeholder="email" />
             </div>
             <input type="text" name="password" placeholder="password" />
-            <a href="" class="log-err">forget your password ?</a>
-            <input type="submit" value="sign in" />
+            <a href="" class="log-err">Forget your password ?</a>
+            <input type="button" value="Sign In" onclick="window.location.href='home.html'" />
           </form>
         </div>
 
         <div id="log-up" class="log-ac">
-          <h3>sign up</h3>
+          <h3>Sign Up</h3>
           <div class="log-icon">
             <a href="#"><i class="fab fa-google"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
-          <p class="log-err">or use your email & password</p>
+          <p class="log-err">Or use your email & password</p>
           <form action="" method="post" class="log-form">
             <input type="text" name="name" placeholder="name" />
-            <input type="text" name="email" placeholder="email" />
-            <input type="text" name="password" placeholder="password" />
-            <input type="submit" value="sign up" />
+            <input type="email" name="email" placeholder="email" />
+            <input type="password" name="password" placeholder="password" />
+            <input type="button" value="Sign Up" onclick="window.location.href='home.html'" />
           </form>
         </div>
 
@@ -57,13 +57,13 @@
             <a href ="home.html"><img src="./imgs/g8rees.png" /></a>
             <h3>Welcome Back</h3>
             <p>where have you been ?</p>
-            <button onclick="if(disable) active()">sign in</button>
+            <button onclick="if(disable) active()">Sign Up</button>
           </div>
           <div id="log-up-msg" class="log-ac log-type">
             <a href ="home.html"><img src="./imgs/g8rees.png" /></a>
             <h3>Hello!</h3>
-            <p>do u wanna play a game ?</p>
-            <button onclick="if(disable) active()">sign in</button>
+            <p>Check for new opportunities</p>
+            <button onclick="if(disable) active()">Sign In</button>
           </div>
         </div>
 

@@ -185,7 +185,7 @@ a.log-err {
   color: #fff;
   width: 100%;
 }
-.log-form input[type="submit"],
+.log-form input[type="button"],
 .log-type button {
   width: 140px;
   background: var(--main);
