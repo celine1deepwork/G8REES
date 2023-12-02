@@ -79,5 +79,64 @@
     clear: both;
     display: table;
     }
+
+    div.solid {
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.334);
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+      .icon-container {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        /* Added margin for better separation */
+      }
+  
+      .icon-container svg {
+        margin-right: 15px;
+        /* Added margin for better separation */
+      }
+  
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border: 2px solid black;
+      }
+  
+      th {
+        background-color: #a1a0a0;
+        position: relative;
+      }
+  
+      td,
+      th {
+        border: 0px solid;
+        text-align: left;
+        padding: 8px;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+  
+      tr:nth-child(odd) {
+        background-color: white;
+      }
+  
+      .tablo-out {
+        width: auto;
+        height: 500px;
+        overflow: hidden;
+        overflow-y: scroll;
+      }
+  
+      .table-filter {
+        border-radius: 5px;
+        background-color: #a1a0a0;
+        border: 1px solid black;
+      }
   
     
