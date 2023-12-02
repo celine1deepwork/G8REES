@@ -1,113 +1,88 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <!--<title>G8REES</title>-->
-        <link rel="stylesheet" type="text/css" href="style/agent.css">
-        <link rel="stylesheet" type="text/css" href="style/navbar.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
 
-        <style>
-          div.solid {
-            border-style: solid;
-            border-color: rgba(0, 0, 0, 0.334);
-            padding-left: 20px;
-            padding-right: 20px;
-          }
+<head>
+  <meta charset="UTF-8">
+  <!--<title>G8REES</title>-->
+  <link rel="stylesheet" type="text/css" href="style/agent.css">
+  <link rel="stylesheet" type="text/css" href="style/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-          .icon-container {
-            display: flex;
-            align-items: center;
-            margin-top: 20px; /* Added margin for better separation */
-        }
+</head>
 
-        .icon-container svg {
-            margin-right: 15px; /* Added margin for better separation */
-        }
-          
-        </style>
-      
-      </head>
-      <body>
-        <nav class="topnav">
-            <div class="sidenav">
-              <a href="buy.html">Buy</a>
-              <a href="rent.html">Rent</a>
-              <a href="agent.html">Agent finder</a>
-            </div>
-            <div class="sidenav logo">
-              <a class="logo-link" href="home.html">
-                <img src="imgs/g8rees.png" alt="Logo" class="logo-img">
-            </a>    </div>
-            <div class="sidenav log">
-              <a href="signin.html">Sign in</a>
-              <a href="signup.html">Sign up</a>
-            </div>
-          </nav>
+<body>
+  <nav class="topnav">
+    <div class="sidenav">
+      <a href="buy.html">Buy</a>
+      <a href="rent.html">Rent</a>
+      <a href="agent.html">Agent finder</a>
+    </div>
+    <div class="sidenav logo">
+      <a class="logo-link" href="home.html">
+        <img src="imgs/g8rees.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="sidenav log">
+      <a href="signin.html">Sign in</a>
+      <a href="signup.html">Sign up</a>
+    </div>
+  </nav>
 
-          <div class="content">
-              <h1 style="color: #DE6767; font-size: 40px;">Find an Agent</h1>
-              
-              <div class="filters">
-                  <div class="filter">
-                      <label for="location">Location:</label>
-                        <div class="search-container">
-                          <input type="text" id="location" name="location" placeholder="Neighborhood/City" class="search-input">
-                          <button type="submit" class="fa fa-search"></i></button>
-                        </div>
-                  </div>
-                  <div class="filter">
-                      <label for="agentName">Agent Name:</label>
-                        <div class="search-container">
-                          <input type="text" id="agentName" name="agentName" placeholder="Agent Name" class="search-input">
-                          <button type="submit" class="fa fa-search"></i></button>   
-                        </div>
-                  </div>
-                <div class="filter">
-                    <label for="specialties">Specialties:</label>
-                    <div class="search-container">
-                        <select id="specialties" name="specialties" placeholder="Any" class="search-input">
-                          <option value="any">Any</option>
-                          <option value="buyeragent">Buyer's Agent</option>
-                          <option value="listingagent">Listing Agent</option>
-                          <option value="relocation">Relocation</option>
-                          <option value="shortsale">Short-Sale</option>
-                          <option value="other">Other</option>
-                        </select>
-                  </div>  
-                </div>
-                <div class="filter">
-                    <label for="languages">Languages:</label>
-                    <div class="search-container">
-                    <select id="languages" name="languages" class="search-input">
-                      <option value="english">English</option>
-                      <option value="german">German</option>
-                      <option value="turkish">Turkish</option>
-                      <option value="spanish">Spanish</option>
-                      <option value="russian">Russian</option>
-                      <option value="italian">Italian</option>
-                      <option value="greek">Greek</option>
-                      <option value="french">French</option>
-                      <option value="arabic">Arabic</option>
-                      <option value="polish">Polish</option>
-                    </select>
-                    <a href="searchagent.html">
-                        <button class="search-button">Search</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="icon-container">
-                <svg style="width:143px; height:137px; Padding-right: 15px;" viewBox="0 0 143 137" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="56.5" cy="56.5" r="51.5" stroke="#DE6767" stroke-width="10"/>
-                  <circle cx="57" cy="52" r="17" fill="#DE6767"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M87.6937 90.9853C79.4442 98.452 68.5032 103 56.5 103C45.1042 103 34.6659 98.9007 26.5792 92.0963C33.0378 81.8258 44.4718 75 57.5 75C70.0526 75 81.1252 81.3365 87.6937 90.9853Z" fill="#DE6767"/>
-                  <path d="M98 91.6465L137 130.646" stroke="#DE6767" stroke-width="12" stroke-linecap="round"/>
-                  </svg>
-                <div class = "solid">
-                  <p style="font-size:20px; color: rgb(111, 111, 111);"> <b>Find agents in your area. <br>   <br> To get started, enter your location or <br> search for a specific agent by name.</b></p>
-                </div>
-              </div>
-            </div>
-      </body>
+  <div class="content">
+    <h1 style="color: #DE6767; font-size: 40px;">Find an Agent</h1>
+
+    <div class="filters">
+      <div class="filter">
+        <label for="location">Location:</label>
+        <div class="search-container">
+          <input type="text" id="location" name="location" placeholder="Neighborhood/City" class="search-input">
+          <a href="searchagent.html">
+            <button type="submit" class="fa fa-search"></i></button>
+          </a>
+        </div>
+      </div>
+      <div class="filter">
+        <label for="agentName">Agent Name:</label>
+        <div class="search-container">
+          <input type="text" id="agentName" name="agentName" placeholder="Agent Name" class="search-input">
+          <a href="searchagent.html">
+            <button type="submit" class="fa fa-search"></i></button>
+          </a>
+        </div>
+      </div>
+      <div class="filter">
+        <label for="specialties">Specialties:</label>
+        <div class="search-container">
+          <select id="specialties" name="specialties" placeholder="Any" class="search-input">
+            <option value="any">Any</option>
+            <option value="buyeragent">Buyer's Agent</option>
+            <option value="listingagent">Listing Agent</option>
+            <option value="relocation">Relocation</option>
+            <option value="shortsale">Short-Sale</option>
+            <option value="other">Other</option>
+          </select>
+          <a href="searchagent.html">
+            <button class="search-button">Search</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="icon-container">
+      <svg style="width:143px; height:137px; Padding-right: 15px;" viewBox="0 0 143 137" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="56.5" cy="56.5" r="51.5" stroke="#DE6767" stroke-width="10" />
+        <circle cx="57" cy="52" r="17" fill="#DE6767" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M87.6937 90.9853C79.4442 98.452 68.5032 103 56.5 103C45.1042 103 34.6659 98.9007 26.5792 92.0963C33.0378 81.8258 44.4718 75 57.5 75C70.0526 75 81.1252 81.3365 87.6937 90.9853Z"
+          fill="#DE6767" />
+        <path d="M98 91.6465L137 130.646" stroke="#DE6767" stroke-width="12" stroke-linecap="round" />
+      </svg>
+      <div class="solid">
+        <p style="font-size:20px; color: rgb(111, 111, 111);"> <b>Find agents in your area. <br> <br> To get started,
+            enter your location or <br> search for a specific agent by name.</b></p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
