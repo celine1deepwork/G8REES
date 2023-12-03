@@ -22,7 +22,10 @@
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
-          <a href="#" class="log-err">Sign In as Admin </a>
+          <button class="log-err log-err-btn" id="adminlog">
+            Sign In as Admin
+          </button>
+
           <form action="" method="post" class="log-form">
             <div class="log-one">
               <input type="text" name="name" placeholder="name" />
@@ -31,42 +34,63 @@
             </div>
             <input type="password" name="password" placeholder="password" />
             <a href="" class="log-err">forget your password ?</a>
-            <input type="button" value="Sign In" onclick="window.location.href='home.html'" />
+            <input
+              type="button"
+              value="Sign In"
+              onclick="window.location.href='home.html'"
+            />
           </form>
         </div>
 
         <div id="log-up" class="log-ac">
-          <h3>Sign Up</h3>
-          <div class="log-icon">
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+          <div class="log-noper">
+            <h3>Sign Up</h3>
+            <div class="log-icon">
+              <a href="#"><i class="fab fa-google"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="log-err">Or use your email & password</p>
+            <form action="" method="post" class="log-form">
+              <input type="text" name="name" placeholder="name" />
+              <input type="email" name="email" placeholder="email" />
+              <input type="password" name="password" placeholder="password" />
+              <input
+                type="button"
+                value="Sign Up"
+                onclick="window.location.href='home.html'"
+              />
+            </form>
           </div>
-          <p class="log-err">Or use your email & password</p>
-          <form action="" method="post" class="log-form">
-            <input type="text" name="name" placeholder="name" />
-            <input type="email" name="email" placeholder="email" />
-            <input type="password" name="password" placeholder="password" />
-            <input type="button" value="Sign Up" onclick="window.location.href='home.html'" />
-          </form>
+          <div class="log-noper log-nope log-adminstyle">
+            <h3>Admin Login</h3>
+            <form action="" method="post" class="log-form">
+              <input type="text" name="name" placeholder="name" />
+              <input type="password" name="password" placeholder="password" />
+              <input
+                type="button"
+                value="Login"
+                onclick="window.location.href='home.html'"
+              />
+            </form>
+          </div>
         </div>
 
         <div id="log-block" class="tochangeStart">
           <div id="log-in-msg" class="log-ac log-type msgGone">
-            <a href ="home.html"><img src="./imgs/g8rees.png" /></a>
+            <a href="home.html"><img src="./imgs/g8rees.png" /></a>
             <h3>Welcome Back</h3>
             <p>where have you been ?</p>
             <button onclick="if(disable) active()">Sign up</button>
           </div>
           <div id="log-up-msg" class="log-ac log-type">
-            <a href ="home.html"><img src="./imgs/g8rees.png" /></a>
+            <a href="home.html"><img src="./imgs/g8rees.png" /></a>
             <h3>Hello!</h3>
             <p>Check for new opportunities</p>
             <button onclick="if(disable) active()">Sign In</button>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -76,8 +100,11 @@
       const loginmsg = document.getElementById("log-in-msg");
       const logupmsg = document.getElementById("log-up-msg");
       const logblock = document.getElementById("log-block");
-      const time = 1000;
+      const lognoper = document.getElementsByClassName("log-noper");
+      const time = 600;
+      document.documentElement.style.setProperty("--time", `${time}ms`);
 
+      let admined=false;
       let disable = true;
       let page = 1;
       let lc = () => {
@@ -93,11 +120,11 @@
 
         // buton toggle edildiğinde
         if (page == 0) {
+          // Log sola
           logblock.classList.add("tochange");
           logblock.classList.add("tochangeEnd");
           logblock.classList.remove("tochangeStart");
 
-          // Log sola
           logupmsg.classList.add("log-toleftmsg");
           logup.classList.add("log-toright");
 
@@ -116,6 +143,15 @@
           logblock.classList.add("tochangeR");
           logblock.classList.remove("tochangeEnd");
           logblock.classList.add("tochangeStart");
+
+          // admin 
+          if (e == "admin") {
+            lognoper[0].classList.add("log-nope");
+            lognoper[1].classList.remove("log-nope");
+          } else {
+            lognoper[0].classList.remove("log-nope");
+            lognoper[1].classList.add("log-nope");
+          }
 
           setTimeout(() => {
             lc();
@@ -139,9 +175,14 @@
           logupmsg.classList.remove("log-fromleftmsg");
           logup.classList.remove("log-toright");
           logupmsg.classList.remove("log-toleftmsg");
-          loginmsg.classList.add()
+          loginmsg.classList.add();
           disable = true;
         }, time);
+      };
+
+      adminlog = document.getElementById("adminlog");
+      adminlog.onclick = () => {
+        if (disable) active("admin");
       };
     </script>
   </body>
