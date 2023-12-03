@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G8REES</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/navbar.css">
+  <link rel="stylesheet" href="style/property.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 50%;
+      /* Sol kısmın genişliği, istediğiniz boyuta göre ayarlayabilirsiniz */
+      height: 100vh;
+      /* Ekran yüksekliğinin tamamını kaplamak için */
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .properties {
+      margin-left: 10px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="topnav">
+    <div class="sidenav">
+      <a href="buy.html">Buy</a>
+      <a href="rent.html">Rent</a>
+      <a href="agent.html">Agent finder</a>
+    </div>
+    <div class="sidenav logo">
+      <a class="logo-link" href="home.html">
+        <img src="imgs/g8rees.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="sidenav log">
+      <a href="signin.html">Sign in</a>
+      <a href="signup.html">Sign up</a>
+    </div>
+  </nav>
+
+
+  <div class="houseProperties" style="padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+    <div style="display: flex ;flex-direction: row; ">
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <img src="imgs/home1.jpg" alt="House 1 - Image 1">
+          </div>
+          <div class="slide">
+            <img src="imgs/home1.jpg"alt="House 2 - Image 1">
+          </div>
+          <div class="slide">
+            <img src="imgs/home1.jpg" alt="House 3 - Image 1">
+          </div>
+          <!-- Daha fazla resim eklemek için aynı yapıyı kopyalayabilirsiniz -->
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+
+      <div class="properties">
+        <h1 style="color: rgb(179,86,110);">Beverly Hills</h1>
+        <h1>$999,900</h1>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+          <div>
+            <p><i style="font-size:24px" class="fa">&#xf236;</i>3 beds</p>
+          </div>
+          <div>
+            <p><i style="font-size:24px" class="fa">&#xf2cd;</i>3 Baths </p>
+          </div>
+          <div>
+            <p>1,366sqft</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+          <div>
+            <p><a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>save</p> 
+          </div>
+          <div>
+            <p><a href="contact.html"><i style="font-size:24px" class="fa">&#xf003;</i></a>contact</p>
+          </div>
+        </div>
+        <div>
+          <p>Building overview</p>
+           <p> Designed by world renowned architect William Hefner, A.I.A., and
+            centrally located in Westwood...</p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const slider = document.querySelector('.slider');
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      currentIndex = index;
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + 3) % 3; // 3 resim varsa
+      showSlide(currentIndex);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % 3; // 3 resim varsa
+      showSlide(currentIndex);
+    }
+  </script>

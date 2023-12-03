@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<title>G8REES</title>-->
+    <link rel="stylesheet" type="text/css" href="style/agent.css">
+    <link rel="stylesheet" type="text/css" href="style/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        div.solid {
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.334);
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            /* Added margin for better separation */
+        }
+
+        .icon-container svg {
+            margin-right: 15px;
+            /* Added margin for better separation */
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="topnav">
+        <div class="sidenav">
+            <a href="buy.html">Buy</a>
+            <a href="rent.html">Rent</a>
+            <a href="agent.html">Agent finder</a>
+        </div>
+        <div class="sidenav logo">
+            <a class="logo-link" href="home.html">
+                <img src="imgs/g8rees.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+        <div class="sidenav log">
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Sign up</a>
+        </div>
+    </nav>
+
+    <div class="content">
+
+        <div class="filters">
+            <div class="filter">
+                <div class="search-container">
+                    <input type="text" id="search" name="search" placeholder="City,Neighborhood,ZIP,Address"
+                        class="search-input">
+                    <button type="submit" class="fa fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="search-container">
+                    <select id="specialties" name="specialties" placeholder="Any" class="search-input">
+                        <option value="any">For Sale</option>
+                        <option value="buyeragent">For Rent</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="search-container">
+                    <select id="languages" name="languages" placeholder="Beds" class="search-input">
+                        <option value="any">beds</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="search-container">
+                    <select id="languages" name="languages" placeholder="Baths" class="search-input">
+                        <option value="any">baths</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="search-container">
+                    <select id="languages" name="languages" placeholder="Baths" class="search-input">
+                        <option value="any">home-type</option>
+                        <option value="1">house</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                    </select>
+                    <a href="searchHouse.html">
+                        <button class="search-button">Search</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="house-gallery" style="padding-left: 20px; padding-right: 20px;">
+        <h2>REAL ESTATE & HOMES FOR SALE</h2>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>
+                
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 60px;">
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>

@@ -49,3 +49,7 @@ nav{
 .topnav-left{
     float: right;
 }
+.filteringbar{
+    overflow: hidden;
+    background-color: #fff;
+}
