@@ -7,8 +7,7 @@
   <link rel="stylesheet" type="text/css" href="style/agent.css">
   <link rel="stylesheet" type="text/css" href="style/navbar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <script src="./filter.js"></script>
+  <link rel="stylesheet" href="agentpage.css">
 
   <style>
     p.solid {
@@ -18,7 +17,7 @@
       padding: 10px;
       overflow: hidden;
       overflow-y: scroll;
-      
+
     }
 
     body {
@@ -42,7 +41,7 @@
       resize: vertical;
     }
 
-    input[type=submit] {
+    .btn {
       background-color: #3462d7;
       color: white;
       padding: 12px 20px;
@@ -50,14 +49,14 @@
       border-radius: 4px;
       cursor: pointer;
       width: 100%;
-      
+
 
     }
 
-    input[type=submit]:hover {
+    .btn:hover {
       background-color: #3462d7;
       align-items: left;
-      
+
     }
 
     .container {
@@ -485,14 +484,15 @@
       </div>
     </div>
 
-    
-    <div class="container" style="display: flex; flex-direction: column;  justify-content: center; align-items: center; height: 600px; margin-top: 80px; margin-left: 90px; border: solid black;">
-      <form action="/action_page.php" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%;">
-        
+
+    <div class="container"
+      style="display: flex; flex-direction: column;  justify-content: center; align-items: center; height: 600px; margin-top: 80px; margin-left: 90px; border: solid black;">
+      <form method="post" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%;">
+
         <p style="font-size: 40px; padding-left: 80px;"><b>Contact</b></p>
 
 
-        
+
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name..">
 
@@ -505,15 +505,38 @@
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
 
-        <div>
-          <input type="submit" value="Contact">
+        <div class="info">
+          <div>
+            <button class="btn" onclick="openPopup()" type="button"> Send Me Notification </button>
+          </div>
+          <div class="popup" id="popup">
+            <img src="imgs/tick.png">
+            <div style="display: flex; flex-direction: column;">
+            <b style="font-size: 20px; padding-top: 20px;">Thank You!</b>
+            <div style="font-size: 20px; padding-top: 10px; padding-bottom: 15px;">Your Message has sent Successfully!</div>
+          <div>
+            <button type="button" onclick="closePopup()">OKEY</button>
+          </div>
         </div>
-      </form>
+          </div>
+
+        </div>
+
+
     </div>
-  
+
   </div>
 
+  <script>
+    let popup = document.getElementById("popup");
 
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+  </script>
 
 </body>
 
