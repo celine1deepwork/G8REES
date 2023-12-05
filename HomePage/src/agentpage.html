@@ -14,7 +14,7 @@
     p.solid {
       border-style: solid;
       width: 800px;
-      height: 65px;
+      height: 110px;
       padding: 10px;
       overflow: hidden;
       overflow-y: scroll;
@@ -31,7 +31,7 @@
     input[type=text],
     select,
     textarea {
-      width: 90%;
+      width: 100%;
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -42,16 +42,21 @@
     }
 
     input[type=submit] {
-      background-color: #04AA6D;
+      background-color: #3462d7;
       color: white;
       padding: 12px 20px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      width: 100%;
+      
+
     }
 
     input[type=submit]:hover {
-      background-color: #45a049;
+      background-color: #3462d7;
+      align-items: left;
+      
     }
 
     .container {
@@ -87,7 +92,7 @@
 
       <div style="display: flex; flex-direction: row; justify-content: space-between;">
         <div style="display: flex; flex-direction: row; padding: 15px;" class="agents">
-          <svg style="padding-bottom: 20px; padding-left: 30px; padding-top: 40px; scale: 2.5;" width="80" height="78"
+          <svg style="padding-bottom: 10px; padding-left: 15px; padding-top: 30px; scale: 4;" width="80" height="78"
             viewBox="0 0 80 78" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M59 19C59 29.4934 50.4934 38 40 38C29.5066 38 21 29.4934 21 19C21 8.50659 29.5066 0 40 0C50.4934 0 59 8.50659 59 19Z"
@@ -104,7 +109,7 @@
               Centry 21 Scope Reality
             </div>
             <div style="padding-top: 10px;">
-              <svg style="scale: 1.5;" width="22" height="20" viewBox="0 0 22 20" fill="none"
+              <svg style="scale: 1.5;  padding-left: 7px;" width="22" height="20" viewBox="0 0 22 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11 0L13.4697 7.60081H21.4616L14.996 12.2984L17.4656 19.8992L11 15.2016L4.53436 19.8992L7.00402 12.2984L0.538379 7.60081H8.53035L11 0Z"
@@ -141,7 +146,7 @@
             </div>
 
 
-            <div style="font-size:25px; padding-top: 13px;">
+            <div style="font-size:25px; padding-top: 13px; padding-left: 5px;">
               0555 987 32 54
             </div>
 
@@ -470,14 +475,23 @@
           Exit Realty Group is a premier local Real Estate firm which services the Westchester and the Bronx Counties of
           New York. The company was founded by Sonny Vataj in 2012, one of the Top 100 Realtors in the Exit Franchise
           system among 16,000 plus agents and has grown rapidly since then to over 100 agents and 3 locations in New
+          York.Specialties: Buyer's agent, Listing agent, Property Management
+          Exit Realty Group is a premier local Real Estate firm which services the Westchester and the Bronx Counties of
+          New York. The company was founded by Sonny Vataj in 2012, one of the Top 100 Realtors in the Exit Franchise
+          system among 16,000 plus agents and has grown rapidly since then to over 100 agents and 3 locations in New
           York.
         </p>
       </div>
     </div>
 
+    
+    <div class="container" style="display: flex; flex-direction: column;  justify-content: center; align-items: center; height: 600px; margin-top: 80px; margin-left: 90px; border: solid black;">
+      <form action="/action_page.php" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%;">
+        
+        <p style="font-size: 40px; padding-left: 80px;"><b>Contact</b></p>
 
-    <div class="container">
-      <form action="/action_page.php">
+
+        
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name..">
 
@@ -491,12 +505,13 @@
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
 
         <div>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Contact">
         </div>
       </form>
     </div>
-
+  
   </div>
+
 
 
 </body>
