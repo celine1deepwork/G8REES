@@ -70,7 +70,7 @@
             </div>
             <div class="filter">
                 <div class="search-container">
-                    <select id="languages" name="languages" placeholder="Beds" class="search-input">
+                    <select id="Beds" name="Beds" placeholder="Beds" class="search-input">
                         <option value="any">beds</option>
                         <option value="1">1+</option>
                         <option value="2">2+</option>
@@ -83,7 +83,7 @@
 
             <div class="filter">
                 <div class="search-container">
-                    <select id="languages" name="languages" placeholder="Baths" class="search-input">
+                    <select id="Baths" name="Baths" placeholder="Baths" class="search-input">
                         <option value="any">baths</option>
                         <option value="1">1+</option>
                         <option value="2">2+</option>
@@ -96,13 +96,13 @@
 
             <div class="filter">
                 <div class="search-container">
-                    <select id="languages" name="languages" placeholder="Baths" class="search-input">
+                    <select id="Home Type" name="Home Type" placeholder="Home Type" class="search-input">
                         <option value="any">home-type</option>
-                        <option value="1">house</option>
-                        <option value="2">2+</option>
-                        <option value="3">3+</option>
-                        <option value="4">4+</option>
-                        <option value="5">5+</option>
+                        <option value="Houses">Houses</option>
+                        <option value="TownHomes">TownHomes</option>
+                        <option value="MultiFamily">MultiFamily</option>
+                        <option value="Apartments">Apartments</option>
+                        <option value="Manufacture">Manufacture</option>
                     </select>
                     <a href="searchHouse.html">
                         <button class="search-button">Search</button>
@@ -114,16 +114,19 @@
     </div>
 
     <div class="house-gallery" style="padding-left: 20px; padding-right: 20px;">
-        <h2>REAL ESTATE & HOMES FOR SALE</h2>
+        <h2 style="color: rgb(179,86,110);">REAL ESTATE & HOMES FOR SALE</h2>
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
-            <div>
+            <div class="house-card" id="house1" >
                 <div class="house-container">
                     <div class="house1">
-                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                        <a href="property.html" id="favoriteLink"><img src="imgs/home1.jpg" alt="House 1 - Image 1 "
+                                id="favoriteIcon"></a>
                     </div>
                 </div>
-                <a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>
-                
+                <a href="favorites.html"><button><i class="favorite-btn fa fa-heart"
+                            onclick="addToFavorites('house1')"></i></button></a>
+                <!--<a href="favoritePage.html"><i class="favorite-btn fa fa-heart" onclick="toggleFavorite(this)"></i></a>  -->
+
                 <div class="house-info">
                     <p><strong>$999,900</strong></p>
                     <p>3bds | 3ba | 1,366sqft-House for sale</p>
@@ -200,12 +203,72 @@
                 </div>
             </div>
         </div>
+        <script>
+            function addToFavorites(house1) {
+                // Find the house card element
+                const houseCard = document.getElementById(house1);
 
+                // Get the HTML content of the house card
+                const houseHTML = houseCard.outerHTML;
 
+                // Retrieve the current list of favorites from storage or set an empty array if it doesn't exist
+                const favoritesList = localStorage.getItem('favoritesList') ? JSON.parse(localStorage.getItem('favoritesList')) : [];
 
+                // Add the new favorite to the array, avoiding duplicates
+                if (favoritesList.indexOf(searchHouse) === -1) {
+                    favoritesList.push(searchHouse);
 
-
-
-
-
+                    // Store the updated array back in localStorage
+                    localStorage.setItem('favoritesList', JSON.stringify(favoritesList));
+                }
+            }</script>
     </div>
+    <script>
+        function addToFavorites(house1){
+             // Ürün bilgileri
+            var urunAdi = "Ev 1";
+            var urunFiyati = 999900;
+
+            // localStorage'da bir anahtarla ürün bilgilerini kaydet
+            localStorage.setItem("favoriUrun", JSON.stringify({ adi: urunAdi, fiyati: urunFiyati }));
+
+            // Kullanıcıyı favori sayfasına yönlendir
+            window.location.href = "favoritePage.html";
+        }
+
+    </script>
+    
+
+    <script>
+        function addToFavorites(houseId) {
+            // Favori ev bilgileri
+            var evAdi = "Ev 1";
+            var evFiyati = 999900;
+            var evDetay = "3bds | 3ba | 1,366sqft-Ev kiralık";
+            var evAdres = "406 S Olive St, Santa Ana, CA 92707";
+            var evResim = "imgs/home1.jpg";
+
+            // Favori ev bilgilerini localStorage'dan al
+            var favoriEvListesi = JSON.parse(localStorage.getItem("favoriEvListesi")) || [];
+
+            // Favori evi oluştur
+            var favoriEv = {
+                adi: evAdi,
+                fiyati: evFiyati,
+                detay: evDetay,
+                adres: evAdres,
+                resim: evResim
+            };
+
+            // Favori evi listeye ekle
+            favoriEvListesi.push(favoriEv);
+
+            // Favori ev listesini localStorage'a kaydet
+            localStorage.setItem("favoriEvListesi", JSON.stringify(favoriEvListesi));
+
+            alert("Ev favorilere eklendi!");
+        }
+    </script>
+
+
+
