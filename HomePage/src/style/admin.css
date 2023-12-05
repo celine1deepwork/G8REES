@@ -15,15 +15,30 @@ body{
   display: flex;
 }
 nav{
-  position: relative;
+  position: absolute;
   top: 0;
   bottom: 0;
   height: 100vh;
   left: 0;
-  background: #fff;
-  width: 280px;
-  overflow: hidden;
+  background: #dcdada;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  top:0;
+  bottom:0;
+  height:100%;
+  left:0;
+  width:15px;
+  overflow:hidden;
+  -webkit-transition:width .2s linear;
+  transition:width .2s linear;
+  -webkit-transform:translateZ(0) scale(1,1);
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
+  opacity:1;
+}
+nav:hover{
+  width:250px;
+  overflow:hidden;
+  opacity:1;
 }
 .logo{
   text-align: center;
@@ -96,12 +111,12 @@ a:hover{
   color: rgb(227, 227, 227);
   cursor: pointer;
 }
-.main-skills{
+.main-features{
   display: flex;
   margin-top: 20px;
 }
-.main-skills .card{
-  width: 25%;
+.main-features .card{
+  width: 28%;
   margin: 10px;
   background: #fff;
   text-align: center;
@@ -109,27 +124,30 @@ a:hover{
   padding: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.main-skills .card h3{
+.main-features .card h3{
   margin: 10px;
   text-transform: capitalize;
 }
-.main-skills .card p{
+.main-features .card p{
   font-size: 12px;
 }
-.main-skills .card button{
+.main-features .card a{
   background: #c8617e;
   color: #fff;
-  padding: 7px 15px;
+  padding: 7px 7px;
   border-radius: 10px;
-  margin-top: 15px;
   cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  align-items: center;
+  align-content: center;
 }
-.main-skills .card button:hover{
+.main-features .card a:hover{
   background:  #010101;
   color: #ffffff;
   font-size: 14.5px;
 }
-.main-skills .card i{
+.main-features .card i{
   font-size: 22px;
   padding: 10px;
 }
@@ -137,6 +155,8 @@ a:hover{
 /* Houses */
 .main-house{
   margin-top:20px ;
+  margin-left: auto;
+  margin-right: auto;
   text-transform: capitalize;
 }
 .house-box{
@@ -147,9 +167,10 @@ a:hover{
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left : 15px;
+  overflow-x: scroll;
 }
-.house-box ul{
-  list-style: none;
+.house-box ul{  list-style: none;
   display: flex;
 }
 .house-box ul li{
@@ -157,15 +178,11 @@ a:hover{
   color: gray;
   cursor: pointer;
 }
-.house-box ul .active{
-  color: #000;
-  border-bottom: 1px solid #000;
-}
 .house-box .house{
   display: flex;
 }
 .box{
-  width: 33%;
+  width: 100%;
   height: 350px;
   padding: 10px;
   margin: 10px;
@@ -193,6 +210,10 @@ a:hover{
   font-size: 7rem;
   float: right;
   margin: -20px 20px 20px 0;
+}
+.box img{
+  height: 200px;
+  width: 300px;
 }
 .html{
   color: rgb(25, 94, 54);
