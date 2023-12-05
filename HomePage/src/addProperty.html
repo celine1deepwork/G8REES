@@ -43,6 +43,7 @@
             <a href="buy.html">Buy</a>
             <a href="rent.html">Rent</a>
             <a href="agent.html">Agent finder</a>
+            <a href="addProperty.html">Add property</a>
         </div>
         <div class="sidenav logo">
             <a class="logo-link" href="home.html">
@@ -50,15 +51,14 @@
             </a>
         </div>
         <div class="sidenav log">
-            <a href="signin.html">Sign in</a>
-            <a href="signup.html">Sign up</a>
+            <a href="signin.html">Sign out</a>
         </div>
     </nav>
 
 
     <div class="first" style="display: flex; flex-direction: row; justify-content: space-between;">
         <div class="home-info " style="padding-top: 10px; padding-left: 10px; ">
-            <h2 style="color: rgb(179,86,110); padding-left: 10px;">Home Informatıon</h2>
+            <h2 style="color: rgb(179,86,110);text-align:center;">Home Informatıon</h2>
             <div class="content" style="display: flex; flex-direction: row; justify-content: space-between;">
                 <div class="filter" style="padding-left: 10px;">
                     <div class="search-container">
@@ -96,9 +96,6 @@
                             <option value="4">4+</option>
                             <option value="5">5+</option>
                         </select>
-                        <a href="searchHouse.html">
-                            <button class="search-button">Search</button>
-                        </a>
                     </div>
                 </div>
 
@@ -107,81 +104,103 @@
         </div>
 
         <div class="Photos"
-            style="display: flex; flex-direction: row; justify-content:space-between ; padding-top: 20px;">
+            style=" justify-content:space-between ; padding-top: 20px; padding-left: 10px; padding-right: 300px;">
+            <h2 style=" color: rgb(179,86,110) ;">Photos</h2>
+            <div
+                style="width: 300px; margin: auto; display: flex; flex-direction: row; justify-content: space-between;">
+                <div>
+                    <th><img src="imgs/home.jpg" alt="HTML5 Icon" style="width:80px;height:60px;"></th>
+                </div>
+                <div>
+                    <th><img src=" imgs/home.jpg" alt="HTML5 Icon"style="width:80px;height:60px;"></th>
+                </div>
+                <div>
+                    <th><img src=" imgs/home.jpg" alt="HTML5 Icon" style="width:80px;height:60px;"></th>
+                </div>
+            </div>
+            <div style=" width: 300px; margin: auto; display: flex; flex-direction: row; justify-content:
+                            space-between;">
+                        <div>
+                    <th><img src="imgs/home.jpg" alt="HTML5 Icon" style="width:80px;height:60px;"></th>
+                </div>
+                <div>
+                    <th><img src=" imgs/home.jpg" alt="HTML5 Icon" style="width:80px;height:60px;"></th>
+                </div>
+                <div>
+                    <th><img src=" imgs/home.jpg" alt="HTML5 Icon" style="width:80px;height:60px;"></th>
+                </div>
+            </div>
+            
 
-            <div style="padding-top: 20px; padding-left: 20px; ">
-                <h2>Photos</h2>
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-            </div>
-            <div style="padding-top: 20px; padding-left: 20px ; padding-top: 90px;">
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                <<img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-                    <img scr="imgs/home1.jpg" alt="house" width="20px" height="20px">
-            </div>
+            
         </div>
+
     </div>
 
 
 
-    <div style="display: flex; flex-direction: row; justify-content: space-between;">
-        <div style="padding-top: 10px; padding-left: 20px;">
+    <div style=" display: flex; flex-direction: row; justify-content: space-between;">
+                        <div style="padding-top: 10px; padding-left: 20px;">
 
-            <div>
-                <h4 class="price">Price</h4>
-                <input type="text" placeholder="Price">
-            </div>
-            <div>
-                <h4>Year Built</h4>
-                <input type="text" placeholder="year Built">
-            </div>
-            <div>
-                <h4>Square Feet</h4>
-                <input type="text" placeholder="Square Feet">
-            </div>
-            <div>
-                <h4>Key Words</h4>
-                <input type="text" placeholder="Key Words">
-                <input type="submit" value="Submit">
-            </div>
-        </div>
+                            <div>
+                                <h4 style="color:  rgb(179,86,110);">Price</h4>
+                                <input type="text" placeholder="Price" style="width: 200px; height: 40px;">
+                            </div>
+                            <div>
+                                <h4 style="color:  rgb(179,86,110);">Year Built</h4>
+                                <input type="text" placeholder="year Built" style="width: 200px; height: 40px;">
+                            </div>
+                            <div>
+                                <h4 style="color:  rgb(179,86,110);">Square Feet</h4>
+                                <input type="text" placeholder="Square Feet" style="width: 200px; height: 40px;">
+                            </div>
+                            <div>
+                                <h4 style="color:  rgb(179,86,110);">Key Words</h4>
+                                <input type="text" placeholder="Key Words" style="width: 200px; height: 40px;">
 
-        <div class="checkBoxes" style="display: flex; flex-direction: row; justify-content: space-between;" >
-            <div class="pets" style="padding-right: 150px;">
-                
-                    <h4>Pats</h4>
-                    <input type="checkbox" id="allowPaths" name="allowPaths" value="allowPaths">
-                    <label for="vehicle1"> Allow Paths</label><br>
-                    <input type="checkbox" id="allowSmallDogs" name="allowSmallDogs" value="allowSmallDogs">
-                    <label for="vehicle2"> Allow Small Dogs</label><br>
-                    <input type="checkbox" id="allowCats" name="allowCats" value="allowCats">
-                    <label for="vehicle3">Allow Cats</label><br><br>
-                
-            </div>
-            <div class="Other Amenities" style="padding-right: 100px;">
-                
-                    <h4>Other Amenities</h4>
-                    <input type="checkbox" id="havepool" name="havepool" value="havepool">
-                    <label for="vehicle1"> Have Pool</label><br>
-                    <input type="checkbox" id="onsideparking" name="onsideparking" value="onsideparking">
-                    <label for="vehicle2"> On-side Parking</label><br>
-                    <input type="checkbox" id="allowCats" name="allowCats" value="allowCats">
-                    <label for="vehicle3">Allow Cats</label><br><br>
-                
-            </div>
-            <div class="for-sale\rent" style="padding-right: 50px;">
-                <h4>For sale or rent</h4>
-                <input type="checkbox" id="sale" name="sale" value="sale">
-                <label for="vehicle1"> sale</label><br>
-                <input type="checkbox" id="rent" name="rent" value="rent">
-                <label for="vehicle2">rent</label><br>
+                            </div>
+                        </div>
 
-            </div>
+                        <div class="checkBoxes"
+                            style="display: flex; flex-direction: row; justify-content: space-between; padding-left: 20px ; padding-left: 5px;">
+                            <div class="pats" style="padding-right: 100px;">
 
-        </div>
+                                <h4 style="color:  rgb(179,86,110);">Pats</h4>
+                                <input type="checkbox" id="allowPaths" name="allowPaths" value="allowPaths" style="transform: scale(2.0);">
+                                <label for="vehicle1"> Allow Paths</label><br>
+                                <input type="checkbox" id="allowSmallDogs" name="allowSmallDogs" value="allowSmallDogs" style="transform: scale(2.0);">
+                                <label for="vehicle2"> Allow Small Dogs</label><br>
+                                <input type="checkbox" id="allowCats" name="allowCats" value="allowCats" style="transform: scale(2.0);">
+                                <label for="vehicle3">Allow Cats</label><br>
+
+                            </div>
+
+                            <div class="Other Amenities" style="padding-right: 100px;">
+
+                                <h4 style="color:  rgb(179,86,110);">Other Amenities</h4>
+                                <input type="checkbox" id="havepool" name="havepool" value="havepool" style="transform: scale(2.0);">
+                                <label for="vehicle1"> Have Pool</label><br>
+                                <input type="checkbox" id="onsideparking" name="onsideparking" value="onsideparking" style="transform: scale(2.0);">
+                                <label for="vehicle2"> On-side Parking</label><br>
+                                <input type="checkbox" id="allowCats" name="allowCats" value="allowCats" style="transform: scale(2.0);">
+                                <label for="vehicle3">Allow Cats</label><br><br>
+
+                            </div>
+                            <div class="for-sale\rent" style="padding-right: 50px;">
+                                <h4 style="color:  rgb(179,86,110);">For sale or rent</h4>
+                                <input type="checkbox" id="sale" name="sale" value="sale" style="transform: scale(2.0);">
+                                <label for="vehicle1"> sale</label><br>
+                                <input type="checkbox" id="rent" name="rent" value="rent" style="transform: scale(2.0);">
+                                <label for="vehicle2">rent</label><br>
+
+                            </div>
+
+                        </div>
     </div>
+    <div style="text-align: right; padding-right: 100px;">
+      <a href="approvals.html">  <button type="submit" style="height: 40px; width: 500px; background-color: rgb(179,86,110); color: white;">
+        Send for Approval
+    </button></a>
+    </div>
+    
+                

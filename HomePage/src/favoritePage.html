@@ -37,6 +37,8 @@
             <a href="buy.html">Buy</a>
             <a href="rent.html">Rent</a>
             <a href="agent.html">Agent finder</a>
+            <a href="addProperty.html">Add property</a>
+
         </div>
         <div class="sidenav logo">
             <a class="logo-link" href="home.html">
@@ -44,8 +46,7 @@
             </a>
         </div>
         <div class="sidenav log">
-            <a href="signin.html">Sign in</a>
-            <a href="signup.html">Sign up</a>
+            <a href="signin.html">Sign out</a>
         </div>
     </nav>
 
@@ -111,32 +112,48 @@
                 </div>
             </div>
         </div>
-    </div><h1>Favori Evler</h1>
-
-    <div id="favoriEvListesi"></div>
-
-    <script>
-        // localStorage'dan favori ev listesini al
-        var favoriEvListesi = JSON.parse(localStorage.getItem("favoriEvListesi")) || [];
-
-        // Favori evleri sayfada göster
-        var favoriEvListesiDiv = document.getElementById("favoriEvListesi");
-        favoriEvListesi.forEach(function(favoriEv) {
-            var evDiv = document.createElement("div");
-            evDiv.innerHTML = `
-                <div class="house-card">
-                    <div class="house-container">
-                        <div class="house1">
-                            <a href="property.html"><img src="${favoriEv.resim}" alt="${favoriEv.adi}"></a>
-                        </div>
-                    </div>
-                    <div class="house-info">
-                        <p><strong>${favoriEv.fiyati}</strong></p>
-                        <p>${favoriEv.detay}</p>
-                        <p>${favoriEv.adres}</p>
+    </div>
+    <div class="house-gallery" style="padding-left: 20px; padding-right: 20px;">
+        <h2 style="color: rgb(179,86,110);">SAVED PROPERTİES</h2>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div class="house-card" id="house1">
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html" id="favoriteLink"><img src="imgs/home1.jpg" alt="House 1 - Image 1 "
+                                id="favoriteIcon"></a>
                     </div>
                 </div>
-            `;
-            favoriEvListesiDiv.appendChild(evDiv);
-        });
-    </script>
+
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+            <div>
+                <div class="house-container">
+                    <div class="house1">
+                        <a href="property.html"><img src="imgs/home1.jpg" alt="House 1 - Image 1"></a>
+                    </div>
+                </div>
+                <div class="house-info">
+                    <p><strong>$999,900</strong></p>
+                    <p>3bds | 3ba | 1,366sqft-House for sale</p>
+                    <p>406 S Olive St, Santa Ana, CA 92707</p>
+                </div>
+            </div>
+        </div>
+    </div>
