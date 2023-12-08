@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>G8REES</title>
   <link rel="stylesheet" type="text/css" href="style/style.css">
   <link rel="stylesheet" type="text/css" href="style/navbar.css">
+  <style>
+    .buyHome:hover , .sellHome:hover , .rentHome:hover{
+      background-color: white;
+    }
+    .content button:hover{
+      background-color:#0707f7;
+    }
+    
+
+    
+  </style>
 
 </head>
+
 <body>
   <nav class="topnav">
     <div class="sidenav">
@@ -31,23 +44,59 @@
     </div>
   </nav>
 
-  <section  class="search-container">
+  <section class="search-container">
     <div class="search-mid">
       <div class="search-txt">
         <p>Agents. Tours. Loans. Homes.</p>
       </div>
-      <div  class="search-mix">
+      <div class="search-mix">
         <input type="text" class="search-input" placeholder="Search...">
         <div id="search-icon" class="search-button">
-          <svg viewBox="0 0 32 32" theme="[object Object]" aria-hidden="true" focusable="false" role="img"><path stroke="none" d="M29.41,26.59,23.77,21A12,12,0,0,0,14,2c-.17,0-.33,0-.5,0s-.33,0-.5,0A11,11,0,0,0,2,13c0,.17,0,.33,0,.5s0,.33,0,.5a12,12,0,0,0,19,9.77l5.64,5.64a2,2,0,0,0,2.82-2.82ZM14,22a8,8,0,1,1,8-8A8,8,0,0,1,14,22Z"></path></svg>
+          <svg viewBox="0 0 32 32" theme="[object Object]" aria-hidden="true" focusable="false" role="img">
+            <path stroke="none"
+              d="M29.41,26.59,23.77,21A12,12,0,0,0,14,2c-.17,0-.33,0-.5,0s-.33,0-.5,0A11,11,0,0,0,2,13c0,.17,0,.33,0,.5s0,.33,0,.5a12,12,0,0,0,19,9.77l5.64,5.64a2,2,0,0,0,2.82-2.82ZM14,22a8,8,0,1,1,8-8A8,8,0,0,1,14,22Z">
+            </path>
+          </svg>
         </div>
       </div>
-      
+
     </div>
   </section>
 
-      <div class="content">
-   
+  <div class="content" style="display: flex; flex-direction: row; justify-content: space-between; padding-left: 20px; padding-right: 20px; background-color:#e9e9f1 ;padding-top: 30px;">
+    <div class="buyHome" style="border: 2px solid #d7d7dd ; padding: 10px   ; width: 330px; height: 450px ; padding-top: 20px; ">
+      <h3>Buy a Home</h3>
+      <div>
+        <img src="imgs/buyHome.JPG" alt="buyHome" style="width: 300px; height: 200px; padding: 10px;">
+      </div>
+      <div>
+        <p style="padding: 20pxpx;">Find your place with an immersive photo experience and the most listings, including things you won’t find
+          anywhere else</p>
+          <a href="buy.html" ><button style="width: 150px; height: 50px ; color: ##bdbdc2;">Browse Homes</button></a>
+      </div>
+    </div>
+    <div class="sellHome" style="border: 2px solid #d7d7dd ; padding: 10px; width: 330px; height: 450px; padding-top: 20px;">
+      <h3>Sell a Home</h3>
+      <div>
+        <img src="imgs/sellHome.JPG" alt="sellHome" style="width: 300px; height: 200px; padding: 10px;">
+      </div>
+      <div>
+        <p>No matter what path you take to sell your home, we can help you navigate a successful sale.</p>
+        <a href="addProperty.html" ><button style="width: 150px; height: 50px ; color:#bdbdc2 ;">See Your Options</button></a>
+      </div>
+    </div>
+    <div class="rentHome" style="border: 2px solid #d7d7dd; padding: 10px;width: 330px; height: 450px;  padding-top: 20px;">
+      <h3>Rent a Home</h3>
+      <div>
+        <img src="imgs/rentHome.JPG" alt="sellHome" style="width: 300px; height: 200px; padding: 10px;">
+      </div>
+      <div>
+        <p>We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</p>
+        <a href="rent.html" ><button style="width: 150px; height: 50px ; color: #bdbdc2;">Find Rentals</button></a>
+      </div>
+
+    </div>
   </div>
 </body>
+
 </html>
