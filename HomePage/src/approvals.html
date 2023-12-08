@@ -1,0 +1,190 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+
+    <title>Admin Approve Page</title>
+
+    <link rel="stylesheet" href="style/approvals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="js/approvals.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <button type="button" class="icon-button">
+        <span class="material-icons">notifications</span>
+        <span class="icon-button__badge">2</span>
+    </button>
+    <nav class="main-menu">
+        <div class="scrollbar" id="style-1">
+            <ul>
+                <li><a href="admin.html" class="logo">
+                        <img src="imgs/logo.png" alt="">
+                        <span class="nav-item">DashBoard</span>
+                    </a></li>
+                <li><a href="admin.html">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Home</span>
+                    </a></li>
+                <li><a href="approvals.html">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-item">Approvals</span>
+                    </a></li>
+                <li><a href="date.html">
+                        <i class="fas fa-calendar"></i>
+                        <span class="nav-item">Date's</span>
+                    </a></li>
+
+                <li><a href="" class="settings">
+                        <i class="fas fa-cog"></i>
+                        <span class="nav-item">Settings</span>
+                    </a></li>
+                <li><a href="" class="help">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="nav-item">Help</span>
+                    </a></li>
+                <li><a href="signin.html" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log out</span>
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="min-height: 80vh; display: flex; align-items: center;justify-content: center;">
+        <p class="title"> Admin Approve Page</p>
+
+        <div class="scrolling-wrapper">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">San Francisco</p>
+                    <img class="image-content" src="imgs/estate.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <p></p>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">Los Angeles</p>
+                    <img class="image-content" src="imgs/estate2.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">Ocean City</p>
+                    <img class="image-content" src="imgs/estate8.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">Ohio</p>
+                    <img class="image-content" src="imgs/estate3.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">Chicago</p>
+                    <img class="image-content" src="imgs/estate4.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">Washington</p>
+                    <img class="image-content" src="imgs/estate5.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">Atlanta</p>
+                    <img class="image-content" src="imgs/estate6.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">Baltimore</p>
+                    <img class="image-content" src="imgs/estate7.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <p class="title-house">San Diego</p>
+                    <img class="image-content" src="imgs/estate8.jpeg">
+                    <a href="admin.html">65th Street Luxury West Apartment for Sale..</a>
+                    <div class="button-container">
+                        <button class="accept-button"
+                            onclick="showNotificationSuccess('Estate is Approved Successfully');removeCard(this)">Accept</button>
+                        <button class="reject-button" onclick="confirmReject(this)">Reject</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal">
+        <div class="footer-1">
+            <p>Total Accepted: <span id="accepted-count">0</span></p>
+        </div>
+        <div class="footer-2">
+            <p>Total Rejected: <span id="rejected-count">0</span></p>
+        </div>
+    </div>
+</body>
+
+<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+
+</html>
